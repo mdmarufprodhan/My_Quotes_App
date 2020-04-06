@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		19E8683C243B75CA00BD8150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E8683B243B75CA00BD8150 /* AppDelegate.swift */; };
 		19E8683E243B75CA00BD8150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E8683D243B75CA00BD8150 /* ViewController.swift */; };
-		19E86841243B75CA00BD8150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E8683F243B75CA00BD8150 /* Main.storyboard */; };
+		19E86841243B75CA00BD8150 /* MyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E8683F243B75CA00BD8150 /* MyQuotes.storyboard */; };
 		19E86843243B75CD00BD8150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E86842243B75CD00BD8150 /* Assets.xcassets */; };
 		19E86846243B75CD00BD8150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E86844243B75CD00BD8150 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		19E86838243B75CA00BD8150 /* MyQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E8683B243B75CA00BD8150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E8683D243B75CA00BD8150 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19E86840243B75CA00BD8150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19E86840243B75CA00BD8150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyQuotes.storyboard; sourceTree = "<group>"; };
 		19E86842243B75CD00BD8150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E86845243B75CD00BD8150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19E86847243B75CD00BD8150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			children = (
 				19E8683B243B75CA00BD8150 /* AppDelegate.swift */,
 				19E8683D243B75CA00BD8150 /* ViewController.swift */,
-				19E8683F243B75CA00BD8150 /* Main.storyboard */,
+				19E8683F243B75CA00BD8150 /* MyQuotes.storyboard */,
 				19E86842243B75CD00BD8150 /* Assets.xcassets */,
 				19E86844243B75CD00BD8150 /* LaunchScreen.storyboard */,
 				19E86847243B75CD00BD8150 /* Info.plist */,
@@ -124,7 +124,7 @@
 			files = (
 				19E86846243B75CD00BD8150 /* LaunchScreen.storyboard in Resources */,
 				19E86843243B75CD00BD8150 /* Assets.xcassets in Resources */,
-				19E86841243B75CA00BD8150 /* Main.storyboard in Resources */,
+				19E86841243B75CA00BD8150 /* MyQuotes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,12 +143,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19E8683F243B75CA00BD8150 /* Main.storyboard */ = {
+		19E8683F243B75CA00BD8150 /* MyQuotes.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				19E86840243B75CA00BD8150 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MyQuotes.storyboard;
 			sourceTree = "<group>";
 		};
 		19E86844243B75CD00BD8150 /* LaunchScreen.storyboard */ = {
@@ -285,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K346988S9T;
 				INFOPLIST_FILE = MyQuotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Md-Maruf-prodhan.MyQuotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K346988S9T;
 				INFOPLIST_FILE = MyQuotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Md-Maruf-prodhan.MyQuotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
