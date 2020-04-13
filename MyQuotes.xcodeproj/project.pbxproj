@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19471EE82443A8A500D49ADA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19471EE72443A8A500D49ADA /* FavoriteViewController.swift */; };
+		19AF829D244440B800ADE03F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF829C244440B800ADE03F /* SettingViewController.swift */; };
 		19E8683C243B75CA00BD8150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E8683B243B75CA00BD8150 /* AppDelegate.swift */; };
 		19E86841243B75CA00BD8150 /* MyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E8683F243B75CA00BD8150 /* MyQuotes.storyboard */; };
 		19E86843243B75CD00BD8150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E86842243B75CD00BD8150 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		19471EE72443A8A500D49ADA /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		19AF829C244440B800ADE03F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		19E86838243B75CA00BD8150 /* MyQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E8683B243B75CA00BD8150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E86840243B75CA00BD8150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyQuotes.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				19E86844243B75CD00BD8150 /* LaunchScreen.storyboard */,
 				19E86847243B75CD00BD8150 /* Info.plist */,
 				19FF9C2224403FC200FD0C92 /* HomeViewController.swift */,
+				19AF829C244440B800ADE03F /* SettingViewController.swift */,
 				19471EE72443A8A500D49ADA /* FavoriteViewController.swift */,
 			);
 			path = MyQuotes;
@@ -142,6 +145,7 @@
 				19E8683C243B75CA00BD8150 /* AppDelegate.swift in Sources */,
 				19471EE82443A8A500D49ADA /* FavoriteViewController.swift in Sources */,
 				19FF9C2324403FC200FD0C92 /* HomeViewController.swift in Sources */,
+				19AF829D244440B800ADE03F /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

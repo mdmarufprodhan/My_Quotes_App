@@ -13,6 +13,11 @@ class FavoriteViewController: UIViewController {
     @IBOutlet weak var favoriteImgView: UIImageView!
    
     override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        view.backgroundColor = theme
+        
         let savingDefaults = UserDefaults.standard
         let indexsaved = savingDefaults.integer(forKey: "Favorite")
         let imageName = "quote\(indexsaved)"

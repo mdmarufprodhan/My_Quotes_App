@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fi-fG-iTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="-58"/>
+            <point key="canvasLocation" x="1918" y="-58"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pwn-mY-Ohv">
@@ -144,7 +144,7 @@
         <!--Setting-->
         <scene sceneID="6zE-t5-lME">
             <objects>
-                <viewController id="FBf-Z1-Zhe" sceneMemberID="viewController">
+                <viewController id="FBf-Z1-Zhe" customClass="SettingViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GP7-Zd-Zx0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,10 +173,13 @@
                                     <constraint firstAttribute="height" constant="27" id="aUb-nf-g04"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Dark"/>
+                                    <segment title="Light"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedChanged:" destination="FBf-Z1-Zhe" eventType="valueChanged" id="fdm-El-mg9"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Bordar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpT-ve-wh4">
                                 <rect key="frame" x="99" y="323" width="174" height="45"/>
@@ -194,6 +197,9 @@
                                 </constraints>
                                 <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="FBf-Z1-Zhe" eventType="valueChanged" id="LH1-dz-5RJ"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Favorite Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2Q-c7-Jvp">
                                 <rect key="frame" x="81" y="441" width="213" height="47"/>
@@ -239,10 +245,19 @@
                         <viewLayoutGuide key="safeArea" id="nXH-3k-cJx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="settings" id="Gdn-cZ-muN"/>
+                    <connections>
+                        <outlet property="segmentedTheme" destination="scq-Sa-PjD" id="NV0-AI-mRC"/>
+                        <outlet property="stepperFavorite" destination="AUV-If-c4R" id="1U1-uI-IcQ"/>
+                        <outlet property="switchBorder" destination="X7C-tb-2sI" id="trH-00-mad"/>
+                        <outletCollection property="settingLabels" destination="Fwe-eY-eA7" collectionClass="NSMutableArray" id="8q0-Q4-0qa"/>
+                        <outletCollection property="settingLabels" destination="PFk-zG-DSi" collectionClass="NSMutableArray" id="1UU-vU-yqN"/>
+                        <outletCollection property="settingLabels" destination="jpT-ve-wh4" collectionClass="NSMutableArray" id="qA3-Lx-7Ap"/>
+                        <outletCollection property="settingLabels" destination="K2Q-c7-Jvp" collectionClass="NSMutableArray" id="obT-dX-NJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fa7-RK-G3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808.8000000000002" y="-58.020989505247378"/>
+            <point key="canvasLocation" x="2738" y="-58"/>
         </scene>
     </scenes>
     <resources>
