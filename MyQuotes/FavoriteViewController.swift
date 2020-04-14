@@ -8,11 +8,30 @@
 
 import UIKit
 
+//let defaults = UserDefaults.standard
+
 class FavoriteViewController: UIViewController {
     
     @IBOutlet weak var favoriteImgView: UIImageView!
+    
+    let defaults = UserDefaults.standard
    
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+        let themeValue = defaults.integer(forKey: "theme")
+        
+        if themeValue == 0
+        {
+            view.backgroundColor = UIColor.black
+            
+        }
+        else{
+            
+            view.backgroundColor = UIColor.white
+            
+        }
         
         super.viewWillAppear(animated)
         
@@ -24,6 +43,18 @@ class FavoriteViewController: UIViewController {
         let image = UIImage(named: imageName)
 
         favoriteImgView.image = image
+        
+        
+        if imageBorder
+        {
+            
+            favoriteImgView.layer.borderColor = UIColor.red.cgColor
+            favoriteImgView.layer.borderWidth = 5.0
+        }
+        else{
+            
+            favoriteImgView.layer.borderWidth = 0
+        }
         
     }
     override func viewDidLoad() {

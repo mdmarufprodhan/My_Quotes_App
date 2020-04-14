@@ -8,11 +8,16 @@
 
 import UIKit
 var theme : UIColor = UIColor.black
+let defaults = UserDefaults.standard
+
+var imageBorder = false
 
 class HomeViewController: UIViewController
 {
 
     @IBOutlet weak var quoteImageView: UIImageView!
+    
+    
     var quoteArry = ["quote0","quote1","quote2","quote3","quote4","quote5","quote6","quote7","quote8","quote9"]
     var arryIndex  = 0
     
@@ -20,6 +25,33 @@ class HomeViewController: UIViewController
         
         super.viewWillAppear(animated)
         view.backgroundColor = theme
+        
+        
+        let themeValue = defaults.integer(forKey: "theme")
+        
+        if themeValue == 0
+        {
+            view.backgroundColor = UIColor.black
+            
+        }
+        else{
+            
+            view.backgroundColor = UIColor.white
+            
+        }
+        
+        
+        if imageBorder
+        {
+        
+            quoteImageView.layer.borderColor = UIColor.red.cgColor
+            quoteImageView.layer.borderWidth = 5.0
+        }
+        else{
+            
+            quoteImageView.layer.borderWidth = 0
+        }
+    
     }
     
     
@@ -30,8 +62,6 @@ class HomeViewController: UIViewController
           quoteArry.append(String(i))
             
         }
-
-  
     }
     
     @IBAction func backClicked(_ sender: Any) {
@@ -42,8 +72,6 @@ class HomeViewController: UIViewController
             let imageName = quoteArry[arryIndex]
             let quoteImage = UIImage(named: imageName)
             quoteImageView.image = quoteImage
-            
-            
         }
         
     }
@@ -69,5 +97,6 @@ class HomeViewController: UIViewController
         let savingDefault = UserDefaults.standard
         savingDefault.set(arryIndex, forKey: "Favorite")
     }
+    
     
 }

@@ -20,11 +20,29 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var stepperFavorite: UIStepper!
     
+    let defaults = UserDefaults.standard
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
         view.backgroundColor = theme
+        
+        let themeValue = defaults.integer(forKey: "theme")
+        
+        if themeValue == 0
+        {
+            view.backgroundColor = UIColor.black
+            
+            changedTheme(color: UIColor.white)
+        }
+        else{
+            
+            view.backgroundColor = UIColor.white
+            
+            changedTheme(color: .black)
+        
+        }
     }
     
     override func viewDidLoad() {
@@ -38,31 +56,17 @@ class SettingViewController: UIViewController {
         
         let index = segmentedTheme.selectedSegmentIndex
         
+        defaults.set(index, forKey: "theme")
+        
         if index == 0{
             theme = UIColor.black
             
-            for label in settingLabels {
-                
-                label.textColor = UIColor.white
-            }
-            
-            segmentedTheme.tintColor = UIColor.white
-            switchBorder.onTintColor = UIColor.white
-            stepperFavorite.tintColor = UIColor.white
-            
+            changedTheme(color: UIColor.white )
         }
         else{
             theme = UIColor.white
             
-            for label in settingLabels {
-                
-                label.textColor = UIColor.black
-            }
-            
-            segmentedTheme.tintColor = UIColor.black
-            switchBorder.onTintColor = UIColor.black
-            stepperFavorite.tintColor = UIColor.black
-            
+            changedTheme(color: UIColor.black)
         }
         
         view.backgroundColor = theme
@@ -70,6 +74,27 @@ class SettingViewController: UIViewController {
     
 
     @IBAction func switchChanged(_ sender: Any) {
+        
+        if switchBorder . isOn
+        {
+            imageBorder = true
+        }
+        else{
+            
+            imageBorder = false
+        }
+        
+    }
+    func changedTheme(color: UIColor) {
+        
+        for label in settingLabels {
+            
+            label.textColor = UIColor.black
+        }
+        
+        segmentedTheme.tintColor = color
+        switchBorder.onTintColor = color
+        stepperFavorite.tintColor = color
     }
     
 }
