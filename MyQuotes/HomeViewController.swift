@@ -42,10 +42,8 @@ class HomeViewController: UIViewController
             setButtons(color: .black)
         }
         
-        
         if imageBorder
         {
-        
             quoteImageView.layer.borderColor = UIColor.red.cgColor
             quoteImageView.layer.borderWidth = 5.0
         }
@@ -55,9 +53,7 @@ class HomeViewController: UIViewController
         }
     quoteImageView.layer.cornerRadius = 5.0
         
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,8 +75,6 @@ class HomeViewController: UIViewController
         }
         
     }
-    
- 
     @IBAction func nextClicked(_ sender: Any) {
         
         if arryIndex<quoteArry.count-1{
@@ -90,11 +84,8 @@ class HomeViewController: UIViewController
             let quoteImage = UIImage(named: imageName)
             quoteImageView.image = quoteImage
             
-            
         }
-        
     }
-    
     
     @IBAction func favoriteClicked(_ sender: Any) {
         
@@ -110,7 +101,4 @@ class HomeViewController: UIViewController
             button.layer.borderColor = color.cgColor
         }
     }
-    
-    
-    
 }

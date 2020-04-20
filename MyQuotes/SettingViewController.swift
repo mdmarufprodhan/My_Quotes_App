@@ -14,9 +14,7 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var segmentedTheme: UISegmentedControl!
     
-    
     @IBOutlet weak var switchBorder: UISwitch!
-    
     
     @IBOutlet weak var stepperFavorite: UIStepper!
     
@@ -47,11 +45,8 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
-    
-    
+
     @IBAction func segmentedChanged(_ sender: Any) {
         
         let index = segmentedTheme.selectedSegmentIndex
@@ -71,7 +66,6 @@ class SettingViewController: UIViewController {
         
         view.backgroundColor = theme
     }
-    
 
     @IBAction func switchChanged(_ sender: Any) {
         

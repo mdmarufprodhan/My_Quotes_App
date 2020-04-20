@@ -18,8 +18,6 @@ class FavoriteViewController: UIViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         
-        
-        
         let themeValue = defaults.integer(forKey: "theme")
         
         if themeValue == 0
@@ -37,7 +35,6 @@ class FavoriteViewController: UIViewController {
         
         view.backgroundColor = theme
         
-
         let indexsaved = defaults.integer(forKey: "Favorite")
         let imageName = "quote\(indexsaved)"
         let image = UIImage(named: imageName)
@@ -58,7 +55,6 @@ class FavoriteViewController: UIViewController {
         
         favoriteImgView.clipsToBounds = true
         favoriteImgView.layer.cornerRadius = 155.0
-        
         
         
     }
